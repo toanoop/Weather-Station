@@ -15,7 +15,7 @@ request({url: url,json:true},(error,response) => {
       
     } else{
        //console.log("Weather is " + response.body.current.weather_descriptions[0] + " temperature is  " + response.body.current.temperature + " celsius , Feels like  " + response.body.current.feelslike)
-    callback(undefined ,"Weather is " + response.body.current.weather_descriptions[0] + " temperature is  " + response.body.current.temperature + " celsius , Feels like  " + response.body.current.feelslike) 
+    callback(undefined ,"Weather is " + response.body.current.weather_descriptions[0] + " temperature is  " + response.body.current.temperature + " celsius , Feels like  " + response.body.current.feelslike + "Humidity is  " + response.body.current.humidity) 
     }
    
 })
