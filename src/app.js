@@ -8,6 +8,7 @@ const forecast = require('../src/utils/forecast.js')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 //Define paths for Exprss config
 const pathtopublic = path.join(__dirname, '../public')
 //const viewspath = path.join(__dirname, '../templates') -- is not working!!!!
@@ -109,8 +110,8 @@ app.get('*',(req,res) => {
    })
  })
 
-app.listen(3000,() => {
+app.listen(port,() => {
 
-    console.log('Server is Up and Running at port 3000')
+    console.log('Server is Up and Running at port' + port)
 } )
 
