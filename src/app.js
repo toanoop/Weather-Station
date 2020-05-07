@@ -26,10 +26,7 @@ app.get('',(req,res) => {
     res.render('index',{
                message1: 'We are Here',
                message2: 'So that your Next Conversation is not about Weather!'
-              //title: 'We have Moved  as of',
-              //dates: new Date(),
-              //Address: '123 Lincon Road'
-
+              
     })
 } )
 
@@ -77,8 +74,8 @@ app.get('/weather',(req,res) => {
                 //return res.send('<h1>' + error + '</h1>')
                 return res.send({error: error})
             }
-          
-            forecast(geodata.longitude,geodata.latitude,(error,data) => {
+                      
+            forecast(geodata.latitude,geodata.longitude,(error,data) => {
           
               if (error){
 
@@ -92,11 +89,9 @@ app.get('/weather',(req,res) => {
                 location: geodata.location,
                 geodata: data
               })
-          
-          
+                    
             })
-            
-            
+                   
         })
 
        // console.log (datatosend)
